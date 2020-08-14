@@ -10,12 +10,14 @@ var c = document.querySelector("input");
 function addItem(){
 		var d = document.querySelectorAll("li");
 		//set the option to change class when clicked
-		fontChangeLi();
+		//fontChangeLi();
 		var i = 0;
 		d.forEach(function(item){
-			if (item.innerText.toLowerCase()==c.value.toLowerCase()){
+			if (item.innerText.split(' ')[0].toLowerCase()==c.value.toLowerCase()){
 				i += 1;
 			}
+			console.log(item.innerText.split(' ')[0].toLowerCase());
+			console.log(c.value);
 		})
 		if (i==0){
 			var node = document.createElement("li");
